@@ -189,7 +189,7 @@ var act = {
 
 //keys: i/n = it/nit, p/# = pm/channel, x/!/? = ncmd/!cmd/?cmd, a// args/nargs, m/* mention/nmention
 
-keys = {
+var keys = {
 	'np': act.hi,
 	'n#xm': act.hi,
 	'!/': act.info,
