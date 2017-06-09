@@ -3,14 +3,14 @@ const $ = require('colors');
 
 var my = {
 	server: 'irc.freenode.net',
-	channels: ['##zero', '##nove'],
+	channels: [],
 	nick: '[tag]',
 };
 
 //create the bot (autoconnect by default)
 var bot = new irc.Client(my.server, my.nick, {
-	userName: 'nnn',
-	realName: 'nnn',
+	userName: '[tag]',
+	realName: '[tag]',
 //	port: 6667,
 //	localAddress: null,
 //	autoConnect: true,
@@ -34,10 +34,6 @@ var bot = new irc.Client(my.server, my.nick, {
 }).on('error', function (msg) {
     console.log('error: ', msg);
 });
-
-
-//nove console
-
 
 var lastcommand = '';
 
@@ -93,7 +89,6 @@ bot.on('selfMessage', function (to, text) {
 	console.info($.magenta(bot.nick), $.dim(to), text);
 	lastcommand = 'PRIVMSG';	
 });
-
 
 //bot config
 
